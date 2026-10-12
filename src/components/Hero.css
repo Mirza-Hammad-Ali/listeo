@@ -1,0 +1,128 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("./images/bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(100, 100, 100, 0.4);
+  filter: blur(2px);
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+.hero p {
+  font-size: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.search-field .icon {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #666;
+}
+
+.search-field input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 10px;
+  flex: 1;
+  outline: none;
+}
+
+.search-btn {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #cc0000;
+}
+
+/* Categories */
+.categories-section {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff; 
+}
+
+.categories-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.cat-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.cat-btn:hover {
+  background: red;
+  border-color: red;
+}
+
+/* Chat Bubble */
+.chat-bubble {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

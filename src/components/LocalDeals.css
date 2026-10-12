@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.local-deals {
+  width: 95%;
+  margin: 0 auto;
+  padding: 47px 18px 60px;
+  background: #fff;
+  color: #292929;
+  font-family: "Poppins", sans-serif;
+}
+
+.local-deals button {
+  font-family: inherit;
+}
+
+/* Heading */
+
+.section-heading {
+  text-align: center;
+}
+
+.section-heading h1 {
+  margin: 0;
+  color: #171717;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.heading-line {
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin: 10px auto 13px;
+  background: #ff1744;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Categories */
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px auto 18px;
+}
+
+.category-item {
+  display: flex;
+  width: 77px;
+  height: 61px;
+  padding: 8px 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #7e8790;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-item span {
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.category-item:hover,
+.category-item.active {
+  background: #ffe8ed;
+  color: #ff1744;
+}
+
+/* Four coupon cards */
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  align-items: stretch;
+}
+
+.deal-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: #fff;
+}
+
+/* Images and discount badges */
+
+.deal-image {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.deal-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.deal-card:hover .deal-image img {
+  transform: scale(1.04);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border-radius: 18px;
+  background: #fff;
+  color: #292929;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Card information */
+
+.deal-content {
+  padding: 14px 14px 15px;
+}
+
+.deal-content h3 {
+  margin: 0 0 4px;
+  color: #292929;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
+.deal-description {
+  min-height: 16px;
+  margin: 0 0 5px;
+  color: #737373;
+  font-size: 10px;
+  line-height: 17px;
+  font-weight: 300;
+}
+
+.deal-validity {
+  margin: 0 0 11px;
+  color: #15952d;
+  font-size: 9px;
+  line-height: 15px;
+}
+
+/* Coupon code */
+
+.coupon-button {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  padding: 7px 5px;
+  border: 1px dashed #ff1744;
+  border-radius: 20px;
+  background: #fff8fa;
+  color: #ff1744;
+  font-size: 9px;
+  line-height: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.coupon-button:hover {
+  background: #ff1744;
+  color: #fff;
+}
+
+/* Show More */
+
+.show-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 23px;
+}
+
+.show-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 27px;
+  padding: 6px 13px;
+  border: none;
+  border-radius: 18px;
+  background: #ff1744;
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.show-more-button:hover {
+  background: #e90c37;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .deals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .deal-image {
+    height: 130px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .local-deals {
+    padding: 32px 14px 40px;
+  }
+
+  .category-nav {
+    gap: 4px;
+    margin-top: 22px;
+  }
+
+  .category-item {
+    width: 65px;
+    height: 58px;
+  }
+
+  .category-item span {
+    font-size: 9px;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .deal-image {
+    height: 160px;
+  }
+
+  .deal-content {
+    padding: 14px;
+  }
+
+  .deal-content h3 {
+    font-size: 14px;
+  }
+
+  .deal-description {
+    font-size: 11px;
+  }
+
+  .deal-validity {
+    font-size: 10px;
+  }
+
+  .coupon-button {
+    min-height: 34px;
+  }
+}

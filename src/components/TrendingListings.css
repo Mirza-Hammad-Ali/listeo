@@ -1,0 +1,246 @@
+
+.trending-section {
+  width: 100%;
+  padding: 50px 30px 46px;
+  background: #fafafa;
+  font-family: "Nunito Sans", Arial, sans-serif;
+}
+
+.trending-heading {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.trending-heading h2 {
+  margin: 0;
+  color: #222;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+}
+
+.heading-underline {
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 13px auto 0;
+  background: #f71946;
+}
+
+.trending-heading p {
+  margin: 15px 0 0;
+  color: #888;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 23px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.listing-pagination {
+  display: flex;
+  width: fit-content;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 29px auto 0;
+  padding: 0 9px;
+  border-radius: 30px;
+  background: #f1f1f1;
+}
+
+.listing-pagination button {
+  font-family: inherit;
+}
+
+.pagination-arrow {
+  display: flex;
+  width: 14px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #b7b7b7;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.pagination-arrow:hover:not(:disabled) {
+  color: #f71946;
+}
+
+.pagination-arrow:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.pagination-dot {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 2px solid #c7c7c7;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.pagination-dot.active {
+  border-color: #c7c7c7;
+  background: #c7c7c7;
+}
+
+.pagination-dot:hover {
+  border-color: #f71946;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .trending-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .trending-section {
+    padding: 36px 16px 40px;
+  }
+
+  .trending-heading {
+    margin-bottom: 28px;
+  }
+
+  .trending-heading h2 {
+    font-size: 21px;
+  }
+
+  .trending-heading p {
+    font-size: 14px;
+  }
+
+  .trending-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .listing-pagination {
+    gap: 4px;
+    margin-top: 25px;
+  }
+
+  .pagination-dot {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+
+
+/* Fix horizontal overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.trending-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow-x: clip;
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+  width: 100%;
+  max-width: 1400px;
+  min-width: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trending-grid > *,
+.listing-card {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.listing-image,
+.listing-details {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.listing-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.listing-footer {
+  min-width: 0;
+  gap: 8px;
+}
+
+.listing-price {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .trending-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .trending-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .trending-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}

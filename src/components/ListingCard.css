@@ -1,0 +1,261 @@
+
+.listing-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  font-family: "Nunito Sans", Arial, sans-serif;
+  transition: box-shadow 0.25s ease;
+}
+
+.listing-card:hover {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.listing-image {
+  position: relative;
+  height: 225px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.listing-image > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.listing-card:hover .listing-image > img {
+  transform: scale(1.025);
+}
+
+.listing-category {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  max-width: calc(100% - 30px);
+  padding: 5px 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  background: #f71946;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.listing-availability {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: #fff;
+  background: #76c52a;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.image-arrow {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #444;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.image-arrow-left {
+  left: 15px;
+}
+
+.image-arrow-right {
+  right: 15px;
+}
+
+.listing-details {
+  min-height: 174px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 19px 13px;
+}
+
+.featured-badge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 7px;
+  padding: 4px 9px;
+  border-radius: 30px;
+  background: #fff3ce;
+  color: #d99b00;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+}
+
+.featured-badge svg {
+  font-size: 10px;
+}
+
+.listing-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.info-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  padding: 1px;
+  color: #fff;
+  fill: #303030;
+}
+
+.verified-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: #20bd70;
+}
+
+.listing-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 5px 0 0;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.listing-location svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  fill: #999;
+  color: #999;
+}
+
+.listing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 11px;
+}
+
+.listing-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border-radius: 30px;
+  background: #ffe8ed;
+  color: #f71946;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 11px;
+  white-space: nowrap;
+}
+
+.listing-tag svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.listing-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.amenity-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f4f4f4;
+  color: #777;
+}
+
+.amenity-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.listing-footer {
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 19px;
+  border-top: 1px solid #ebebeb;
+}
+
+.listing-rating {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 6px;
+  border-radius: 30px;
+  background: #f4f4f4;
+  color: #444;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.listing-rating svg {
+  color: #ffb600;
+  font-size: 11px;
+}
+
+.listing-price {
+  color: #333;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: right;
+}
+
+/* Responsive card image */
+@media (max-width: 600px) {
+  .listing-image {
+    height: 220px;
+  }
+}
+
