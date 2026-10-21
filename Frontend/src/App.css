@@ -3,7 +3,6 @@
 *::after {
   box-sizing: border-box;
 }
-
 html,
 body,
 #root {
@@ -11,12 +10,10 @@ body,
   min-height: 100%;
   margin: 0;
 }
-
 html,
 body {
   overflow-x: clip;
 }
-
 .app {
   width: 100%;
   max-width: 100%;
